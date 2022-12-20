@@ -13,7 +13,7 @@ int main () {
     float Difference;
     float Product;
     float Quotient;
-    for ( ; ; ) {
+    for (;;) {
         cout << "Operation #" << OperationNumber << endl;
         cout << "First Number: ";
         cin >> FirstNumber;
