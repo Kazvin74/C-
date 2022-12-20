@@ -11,7 +11,7 @@ int main () {
     float OperationNumber = 1;
     char Operator;
     float Answer;
-    for ( ; ; ) {
+    for (;;) {
         cout << "Operation #" << OperationNumber << endl;
         cout << "First Number: ";
         cin >> FirstNumber;
@@ -19,29 +19,23 @@ int main () {
         cin >> SecondNumber;
         cout << "Operator (+, -, *, /): ";
         cin >> Operator;
-
         switch (Operator) {
-
         case '+':
-             Answer = FirstNumber + SecondNumber;
+            Answer = FirstNumber + SecondNumber;
             cout << "Sum: " << Answer << endl << endl;
             break;
-
         case '-':
             Answer = FirstNumber - SecondNumber;
             cout << "Difference: " << Answer << endl << endl;
             break;
-
         case '*':
             Answer = FirstNumber * SecondNumber;
             cout << "Product: " << Answer << endl << endl;
             break;
-
         case '/':
             Answer = FirstNumber / SecondNumber;
             cout << "Quotient: " << Answer << endl << endl;
             break;
-
         default:
             cout << "Invalid Operator" << endl << endl;
             break;
