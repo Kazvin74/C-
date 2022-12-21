@@ -1,6 +1,5 @@
 // All Operations Calculator
 // Created by Kazvin
-// Coded in my phone
 
 #include <iostream>
 using namespace std;
