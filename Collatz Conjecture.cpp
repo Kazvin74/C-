@@ -9,7 +9,7 @@ int main() {
     int number;
     cout << "Enter your number: ";
     cin >> number;
-    cout << number << endl;    
+    cout << endl << "Sequence: " << endl << number << endl;
     while (number > 1) {
         // If the number is an odd number, it will multiply the number by 3 and add 1 (3x + 1)
         if (number % 2 == 1) {
