@@ -1,9 +1,5 @@
-/*
-Fibonacci Sequence
-Created by Kazvin
-Coded in my phone
-Finalized in my laptop
-*/
+// Fibonacci Sequence
+// Created by Kazvin
 
 #include <iostream>
 #include <iomanip>
