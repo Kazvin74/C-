@@ -6,7 +6,8 @@
 using namespace std;
 
 int main() {
-    double FirstNumber, SecondNumber, ThirdNumber, NumbersInSequence, SequenceNumber = 1;
+    double FirstNumber, SecondNumber, ThirdNumber, NumbersInSequence;
+    int SequenceNumber = 1;
     string IncludeSequenceNumber;
     cout << "Initial First Number: ";
     cin >> FirstNumber;
@@ -17,7 +18,7 @@ int main() {
     cout << endl << "Include sequence number? (Y or N) " << endl;
     cin >> IncludeSequenceNumber;
     if ( (IncludeSequenceNumber == "Y" || IncludeSequenceNumber == "N") == 0) {
-        cout << "Invalid input for IncludeSequenceNumber";
+        cout << endl << "Invalid Input";
         return 0;
     }
     cout << endl << "Sequence:" << endl;
