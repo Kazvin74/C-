@@ -28,7 +28,6 @@ int main () {
         int SumLength = StrSum.length();
         if (SumLength >= 14)
             cout << "Sum: " << StrSum.substr(0, SumLength-7) << endl;
-
         else
             cout << "Sum: " << Sum << endl;
 
@@ -37,7 +36,6 @@ int main () {
         int DifferenceLength = StrDifference.length();
         if (DifferenceLength >= 14)
             cout << "Difference: " << StrDifference.substr(0, DifferenceLength-7) << endl;
-
         else
             cout << "Difference: " << Difference << endl;
 
@@ -46,7 +44,6 @@ int main () {
         int ProductLength = StrProduct.length();
         if (ProductLength >= 14)
             cout << "Product: " << StrProduct.substr(0, ProductLength-7) << endl;
-
         else
             cout << "Product: " << Product << endl;
 
@@ -55,7 +52,6 @@ int main () {
         int QuotientLength = StrQuotient.length();
         if (QuotientLength >= 14)
             cout << "Quotient: " << StrQuotient.substr(0, QuotientLength-7) << endl;
-
         else
             cout << "Quotient: " << Quotient << endl;
 
