@@ -16,7 +16,6 @@ int main () {
         cin >> SecondNumber;
         cout << "Operator (+, -, *, /): ";
         cin >> Operator;
-        
         if (Operator == "+") {
             Answer = FirstNumber + SecondNumber;
             cout << "Sum: " << Answer << endl << endl;
@@ -35,7 +34,6 @@ int main () {
         }
         else
             cout << "Invalid Operator" << endl << endl;
-        
         OperationNumber++;
     }
 }
