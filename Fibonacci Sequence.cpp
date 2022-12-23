@@ -1,5 +1,7 @@
-// Fibonacci Sequence
-// Created by Kazvin
+/*
+Fibonacci Sequence
+Created by Kazvin
+*/
 
 #include <iostream>
 #include <iomanip>
