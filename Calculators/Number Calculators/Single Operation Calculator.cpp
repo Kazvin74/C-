@@ -10,7 +10,7 @@ Also, this is just a modified version of my All Operations Calculator.
 */
 
 #include <iostream>
-#include <string>
+#include <iomanip>
 using namespace std;
 
 int main () {
@@ -30,40 +30,32 @@ int main () {
 
         if (Operator == "+") {
             double Sum = FirstNumber + SecondNumber;
-            string StrSum = to_string(Sum);
-            int SumLength = StrSum.length();
-            if (SumLength >= 14)
-                cout << "Sum: " << StrSum.substr(0, SumLength-7) << endl;
+            if (Sum >= 1e7 || Sum >= 1e-7)
+                cout << "Sum: " << fixed << setprecision(0) << Sum;
             else
                 cout << "Sum: " << Sum;
         }
 
         else if (Operator == "-") {
             double Difference = FirstNumber - SecondNumber;
-            string StrDifference = to_string(Difference);
-            int DifferenceLength = StrDifference.length();
-            if (DifferenceLength >= 14)
-                cout << "Difference: " << StrDifference.substr(0, DifferenceLength-7) << endl;
+            if (Difference >= 1e7 || Difference >= 1e-7)
+                cout << "Difference: " << fixed << setprecision(0) << Difference;
             else
                 cout << "Difference: " << Difference;
         }
 
         else if (Operator == "*") {
             double Product = FirstNumber * SecondNumber;
-            string StrProduct = to_string(Product);
-            int ProductLength = StrProduct.length();
-            if (ProductLength >= 14)
-                cout << "Product: " << StrProduct.substr(0, ProductLength-7) << endl;
+            if (Product >= 1e7 || Product >= 1e-7)
+                cout << "Product: " << fixed << setprecision(0) << Product;
             else
                 cout << "Product: " << Product;
         }
 
         else if (Operator == "/") {
             double Quotient = FirstNumber / SecondNumber;
-            string StrQuotient = to_string(Quotient);
-            int QuotientLength = StrQuotient.length();
-            if (QuotientLength >= 14)
-                cout << "Quotient: " << StrQuotient.substr(0, QuotientLength-7) << endl;
+            if (Quotient >= 1e7 || Quotient >= 1e-7)
+                cout << "Quotient: " << fixed << setprecision(0) << Quotient;
             else
                 cout << "Quotient: " << Quotient;
         }
