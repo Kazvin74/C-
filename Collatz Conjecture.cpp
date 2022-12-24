@@ -4,7 +4,7 @@ Created by Kazvin
 */
 
 #include <iostream>
-#include <string>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -21,7 +21,7 @@ int main() {
     }
     cout << endl << "Sequence: " << endl;
 
-    for (;;) {
+    while (Number > 1) {
         string StrNumber = to_string(Number);
         size_t DotIndex = StrNumber.find(".");
         StrNumber = StrNumber.substr(0, DotIndex);
@@ -29,27 +29,15 @@ int main() {
         int LastNumberIndex = NumberLength-1;
         string LastDigit = StrNumber.substr(LastNumberIndex, NumberLength);
 
-        if (LastDigit == "1" || LastDigit == "3" ||
-        LastDigit == "5" || LastDigit == "7" ||
-        LastDigit == "9")
+        if (LastDigit == "1" || LastDigit == "3" || LastDigit == "5" || LastDigit == "7" || LastDigit == "9")
             Number = 3 * Number + 1;
-        else if (LastDigit == "2" || LastDigit == "4" ||
-        LastDigit == "6" || LastDigit == "8" ||
-        LastDigit == "0")
+        else if (LastDigit == "2" || LastDigit == "4" || LastDigit == "6" || LastDigit == "8" || LastDigit == "0")
             Number = Number / 2;
 
         if (IncludeSequenceNumber == "N")
-            cout << StrNumber << endl;
+            cout << fixed << setprecision(0) << Number << endl;
         else if (IncludeSequenceNumber == "Y")
-            cout << SequenceNumber << ". " << StrNumber << endl;
-
-        if (Number == 1) {
-            if (IncludeSequenceNumber == "N")
-                cout << Number << endl;
-            else if (IncludeSequenceNumber == "Y")
-                cout << SequenceNumber+1 << ". " << Number << endl;
-            break;
-        }
+            cout << SequenceNumber << ". " << fixed << setprecision(0) << Number << endl;
 
         SequenceNumber++;
     }
