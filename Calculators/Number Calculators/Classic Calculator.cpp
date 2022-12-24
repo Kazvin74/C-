@@ -3,8 +3,9 @@ Classic Calculator
 Created by Kazvin
 
 Note:
-- If any of the answers is more than 6 digits (like 1000000),
-  the answer would not be accurate. Please take note that it's not a bug.
+- If any of the answers is more than 6 digits (like 1000000) or more than
+  6 decimal places (like 0.0000001), the answer would not be accurate. Please
+  take note that it's not a bug.
 - Also, this is just a modified version of my Single Operation Calculator.
 - You can type "Ans" to make the first number or the second number equal
   to the answer in the previous equation.
