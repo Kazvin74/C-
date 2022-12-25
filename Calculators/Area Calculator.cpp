@@ -9,9 +9,9 @@ The rest: (search "[shape] area" on Google and the calculator in the top of sear
 */
 
 #include <iostream>
-#include <iomanip>
-#include <math.h>
-#include <cmath>
+#include <iomanip> // for setting the number of decimal places in the output (Area)
+#include <math.h> // for the sqrt function
+#include <cmath> // for the pow function
 using namespace std;
 
 int main() {
