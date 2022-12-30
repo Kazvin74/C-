@@ -1,5 +1,5 @@
 {
-    "Print to console": {
+    "Intro": {
 	"scope": "cplusplus",
 	"prefix": "intro",
 	"body": [
