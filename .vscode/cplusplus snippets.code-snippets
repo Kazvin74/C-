@@ -1,0 +1,12 @@
+{
+    "Print to console": {
+	"scope": "cplusplus",
+	"prefix": "intro",
+	"body": [
+	"/*",
+	"$TM_FILENAME",
+	"Created by Kazvin",
+	"*/"
+	]
+	}
+}
