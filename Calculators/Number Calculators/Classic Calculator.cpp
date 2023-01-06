@@ -56,7 +56,7 @@ int main () {
             if (Answer >= 1e7 || Answer <= 1e-7)
                 cout << fixed << setprecision(0) << Answer;
             else
-                cout << "= " << Answer;
+                cout << Answer;
         }
         OperationNumber++;
         cout << endl << endl;
