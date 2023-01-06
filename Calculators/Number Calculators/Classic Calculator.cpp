@@ -22,10 +22,11 @@ using namespace std;
 
 int main () {
     string FirstNumber = "0", SecondNumber = "0", Operator;
+    int OperationNumber = 1;
     double Answer;
 
     for (;;) {
-        cout << "Enter your expression: " << endl;
+        cout << "Operation #" << OperationNumber << endl << "Expression: ";
         cin >> FirstNumber >> Operator >> SecondNumber;
 
         if (FirstNumber == "Ans")
@@ -49,13 +50,15 @@ int main () {
         else
             cout << "Invalid Operator";
 
+        cout << "Answer: ";
+
         if (Operator == "+" || Operator == "-" || Operator == "*" || Operator == "/") {
             if (Answer >= 1e7 || Answer <= 1e-7)
                 cout << fixed << setprecision(0) << Answer;
             else
                 cout << "= " << Answer;
         }
-
+        OperationNumber++;
         cout << endl << endl;
     }
 }
