@@ -15,7 +15,7 @@ int main() {
     cin >> Number;
     cout << endl << "Include sequence number? (Y or N) " << endl;
     cin >> IncludeSequenceNumber;
-    if ((IncludeSequenceNumber == "Y" || IncludeSequenceNumber == "N") == 0) {
+    if (IncludeSequenceNumber != "Y" || IncludeSequenceNumber != "N") {
         cout << endl << "Invalid Input";
         return 0;
     }
