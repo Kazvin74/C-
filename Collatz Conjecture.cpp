@@ -8,8 +8,8 @@ Created by Kazvin
 using namespace std;
 
 int main() {
-    double Number;
-    int SequenceNumber = 1;
+    double Number, DoubleQuotient;
+    int Remainder, IntQuotient, SequenceNumber = 1;
     string IncludeSequenceNumber;
     cout << "Enter your number: ";
     cin >> Number;
@@ -22,22 +22,19 @@ int main() {
     cout << endl << "Sequence: " << endl;
 
     while (Number > 1) {
-        string StrNumber = to_string(Number);
-        size_t DotIndex = StrNumber.find(".");
-        StrNumber = StrNumber.substr(0, DotIndex);
-        int NumberLength = StrNumber.length();
-        int LastNumberIndex = NumberLength-1;
-        string LastDigit = StrNumber.substr(LastNumberIndex, NumberLength);
+        IntQuotient = Number / 2;
+        DoubleQuotient = Number / 2;
+        Remainder = Number - (IntQuotient * 2);
 
-        if (LastDigit == "1" || LastDigit == "3" || LastDigit == "5" || LastDigit == "7" || LastDigit == "9")
+        if (Remainder == 1)
             Number = 3 * Number + 1;
-        else if (LastDigit == "2" || LastDigit == "4" || LastDigit == "6" || LastDigit == "8" || LastDigit == "0")
+        else if (Remainder == 0)
             Number = Number / 2;
 
         if (IncludeSequenceNumber == "N")
-            cout << fixed << setprecision(0) << Number << endl;
+            cout << Number << endl;
         else if (IncludeSequenceNumber == "Y")
-            cout << SequenceNumber << ". " << fixed << setprecision(0) << Number << endl;
+            cout << SequenceNumber << ". " << Number << endl;
 
         SequenceNumber++;
     }
