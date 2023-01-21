@@ -9,9 +9,9 @@ The rest: (search "[shape] area" on Google and the calculator in the top of sear
 */
 
 #include <iostream>
-#include <iomanip> // for setting the number of decimal places in the output (Area)
-#include <math.h> // for the sqrt function
-#include <cmath> // for the pow function
+#include <iomanip>
+#include <math.h>
+#include <cmath>
 using namespace std;
 
 int main() {
@@ -31,7 +31,6 @@ int main() {
     cout << "8 = Octagon" << endl;
     cout << "9 = Nonagon" << endl;
     cout << "10 = Decagon" << endl << endl;
-
     string Shape;
     cout << "Shape (ex. SC): ";
     cin >> Shape;
@@ -39,7 +38,6 @@ int main() {
     cout << "Decimal Places: ";
     cin >> DecimalPlaces;
     cout << endl << "Shape: ";
-
     if (Shape == "C") {
         cout << "Circle" << endl;
         double Radius;
@@ -47,7 +45,6 @@ int main() {
         cin >> Radius;
         Area = Pi * pow(Radius, 2);
     }
-
     else if (Shape == "SC") {
         cout << "Semicircle" << endl;
         double Radius;
@@ -55,7 +52,6 @@ int main() {
         cin >> Radius;
         Area = Pi * pow(Radius, 2) * 0.5;
     }
-
     else if (Shape == "E") {
         cout << "Ellipse" << endl;
         double RadiusA, RadiusB;
@@ -65,7 +61,6 @@ int main() {
         cin >> RadiusB;
         Area = Pi * RadiusA * RadiusB;
     }
-
     else if (Shape == "SE") {
         cout << "Sector" << endl;
         double Angle, Radius;
@@ -75,7 +70,6 @@ int main() {
         cin >> Radius;
         Area = (Angle/360.0) * Pi * pow(Radius, 2);
     }
-
     else if (Shape == "T") {
         cout << "Trapezoid" << endl;
         double BaseA, BaseB, Height;
@@ -87,7 +81,6 @@ int main() {
         cin >> Height;
         Area = (BaseA + BaseB) * 0.5 * Height;
     }
-
     else if (Shape == "3") {
         cout << "Triangle" << endl;
         double Base, Height;
@@ -97,7 +90,6 @@ int main() {
         cin >> Height;
         Area = (Base * Height) * 0.5;
     }
-
     else if (Shape == "4") {
         cout << "Rectangle" << endl;
         double Base, Height;
@@ -107,7 +99,6 @@ int main() {
         cin >> Height;
         Area = (Base * Height);
     }
-
     else if (Shape == "5") {
         cout << "Pentagon" << endl;
         double Side;
@@ -115,7 +106,6 @@ int main() {
         cin >> Side;
         Area = 0.25 * (sqrt(5 * ( 5 + 2 * sqrt(5))) * pow(Side, 2));
     }
-
     else if (Shape == "6") {
         cout << "Hexagon" << endl;
         double Side;
@@ -123,7 +113,6 @@ int main() {
         cin >> Side;
         Area = (3 * sqrt(3)) * 0.5 * pow(Side, 2);
     }
-
     else if (Shape == "7") {
         cout << "Heptagon" << endl;
         double Side;
@@ -131,7 +120,6 @@ int main() {
         cin >> Side;
         Area = 3.6339124325 * pow(Side, 2);
     }
-
     else if (Shape == "8") {
         cout << "Octagon" << endl;
         double Side;
@@ -139,7 +127,6 @@ int main() {
         cin >> Side;
         Area = 2 * (1 + sqrt(2)) * pow(Side, 2);
     }
-
     else if (Shape == "9") {
         cout << "Nonagon" << endl;
         double Side;
@@ -147,7 +134,6 @@ int main() {
         cin >> Side;
         Area = 6.18182417 * pow(Side, 2);
     }
-
     else if (Shape == "10") {
         cout << "Decagon" << endl;
         double Side;
@@ -155,11 +141,9 @@ int main() {
         cin >> Side;
         Area = 2.5 * pow(Side, 2) * sqrt(5 + 2 * sqrt(5));
     }
-
     else {
         cout << "(Invalid Input)";
         return 0;
     }
-
     cout << "Area: " << fixed << setprecision(DecimalPlaces) << Area;
 }
