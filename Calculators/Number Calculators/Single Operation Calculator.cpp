@@ -9,12 +9,9 @@ int main () {
     string Operator;
     while (1) {
         cout << "Operation #" << OperationNumber << endl;
-        cout << "First Number: ";
-        cin >> FirstNumber;
-        cout << "Second Number: ";
-        cin >> SecondNumber;
-        cout << "Operator (+, -, *, /, %, ^, R): ";
-        cin >> Operator;
+        cout << "First Number: "; cin >> FirstNumber;
+        cout << "Second Number: "; cin >> SecondNumber;
+        cout << "Operator (+, -, *, /, %, ^, R): "; cin >> Operator;
         if (Operator == "+") Answer = FirstNumber + SecondNumber;
         else if (Operator == "-") Answer = FirstNumber - SecondNumber;
         else if (Operator == "*") Answer = FirstNumber * SecondNumber;

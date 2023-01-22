@@ -8,10 +8,8 @@ int main () {
     double FirstNumber, SecondNumber;
     while (1) {
         cout << "Operation #" << OperationNumber << endl;
-        cout << "First Number: ";
-        cin >> FirstNumber;
-        cout << "Second Number: ";
-        cin >> SecondNumber;
+        cout << "First Number: "; cin >> FirstNumber;
+        cout << "Second Number: "; cin >> SecondNumber;
         double Sum = FirstNumber + SecondNumber;
         double Difference = FirstNumber - SecondNumber;
         double Product = FirstNumber * SecondNumber;
