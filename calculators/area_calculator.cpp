@@ -15,10 +15,8 @@ using namespace std;
 
 int main () {
 
-    const double Pi = 3.1415926535;
-    double Area;
+    double Area, Radius, RadiusA, RadiusB, Angle, Base, BaseA, BaseB, Height, Side, Pi = 3.1415926535;
     int DecimalPlaces;
-    double Radius, RadiusA, RadiusB, Angle, Base, BaseA, BaseB, Height, Side;
     string Shape;
 
     cout << "Shapes:" << endl << "C = Circle" << endl << "SC = Semicircle" << endl;
@@ -30,7 +28,9 @@ int main () {
     cout << "Shape (ex. SC): ";
     cin >> Shape;
     cout << "Decimal Places: ";
-    cin >> DecimalPlaces; cout << endl;
+    cin >> DecimalPlaces;
+
+    cout << endl;
 
     if (Shape == "C") {
         cout << "Radius: ";

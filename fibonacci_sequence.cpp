@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
 
-    unsigned long long FirstNumber, SecondNumber, ThirdNumber, NumbersInSequence, SequenceNumber = 1;
+    long long FirstNumber, SecondNumber, ThirdNumber, NumbersInSequence, SequenceNumber;
     string IncludeSequenceNumber;
 
     cout << "Initial First Number: ";
@@ -15,9 +15,9 @@ int main() {
     cin >> SecondNumber;
     cout << "Numbers in the sequence: ";
     cin >> NumbersInSequence;
-    cout << endl << "Include sequence number? (Y or N) " << endl;
-    cin >> IncludeSequenceNumber;
 
+    cout << "Include sequence number? (Y or N): ";
+    cin >> IncludeSequenceNumber;
     if (IncludeSequenceNumber != "Y" && IncludeSequenceNumber != "N") {
         cout << endl << "Invalid Input";
         return 0;
@@ -25,7 +25,7 @@ int main() {
 
     cout << endl << "Sequence:" << endl;
 
-    while (SequenceNumber <= NumbersInSequence) {
+    for (SequenceNumber = 1; SequenceNumber <= NumbersInSequence; SequenceNumber++) {
 
         if (IncludeSequenceNumber == "Y")
             cout << SequenceNumber << ". ";
@@ -41,8 +41,6 @@ int main() {
             SecondNumber = ThirdNumber;
             ThirdNumber = 0;
         }
-
-        SequenceNumber++;
 
     }
 

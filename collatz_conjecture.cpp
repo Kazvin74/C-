@@ -10,9 +10,9 @@ int main () {
 
     cout << "Enter your number: ";
     cin >> Number;
-    cout << endl << "Include sequence number? (Y or N) " << endl;
-    cin >> IncludeSequenceNumber;
 
+    cout << "Include sequence number? (Y or N): ";
+    cin >> IncludeSequenceNumber;
     if (IncludeSequenceNumber != "Y" && IncludeSequenceNumber != "N") {
         cout << endl << "Invalid Input";
         return 0;
