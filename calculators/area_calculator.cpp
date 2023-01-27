@@ -4,7 +4,7 @@ Area Calculator by Kazvin
 References:
 Area of Semicircle: https://www.easycalculation.com/area/area-semicircle-calculator.php
 Area of Sector: https://thirdspacelearning.com/gcse-maths/geometry-and-measure/area-of-a-sector/
-The rest: (search "[shape] area" on Google and the calculator in the top of search results)
+The rest: (search "[shape] area" on Google and the calculator on the top of search results)
 */
 
 #include <iostream>
@@ -14,24 +14,19 @@ The rest: (search "[shape] area" on Google and the calculator in the top of sear
 using namespace std;
 
 int main () {
-
     double Area, Radius, RadiusA, RadiusB, Angle, Base, BaseA, BaseB, Height, Side, Pi = 3.1415926535;
     int DecimalPlaces;
     string Shape;
-
     cout << "Shapes:" << endl << "C = Circle" << endl << "SC = Semicircle" << endl;
     cout << "E = Ellipse" << endl << "SE = Sector" << endl << "T = Trapezoid" << endl;
     cout << "3 = Triangle" << endl << "4 = Rectangle" << endl << "5 = Pentagon" << endl;
     cout << "6 = Hexagon" << endl << "7 = Heptagon" << endl << "8 = Octagon" << endl;
     cout << "9 = Nonagon" << endl << "10 = Decagon" << endl << endl;
-
     cout << "Shape (ex. SC): ";
     cin >> Shape;
     cout << "Decimal Places: ";
     cin >> DecimalPlaces;
-
     cout << endl;
-
     if (Shape == "C") {
         cout << "Radius: ";
         cin >> Radius;
@@ -99,7 +94,5 @@ int main () {
         cout << "Invalid Input";
         return 0;
     }
-
     cout << "Area: " << fixed << setprecision(DecimalPlaces) << Area;
-
 }
