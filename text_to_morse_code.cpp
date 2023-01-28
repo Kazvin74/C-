@@ -1,4 +1,9 @@
-// Text to Morse Code by Kazvin
+/*
+Text to Morse Code by Kazvin (v202301282335)
+
+Reference:
+Morse Codes: https://morsedecoder.com
+*/
 #include <iostream>
 using namespace std;
 

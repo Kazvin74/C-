@@ -1,4 +1,4 @@
-// Collatz Conjecture by Kazvin
+// Collatz Conjecture by Kazvin (v202301282335)
 #include <iostream>
 using namespace std;
 

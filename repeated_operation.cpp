@@ -1,4 +1,4 @@
-// Repeated Operation by Kazvin
+// Repeated Operation by Kazvin (v202301282335)
 #include <iostream>
 #include <math.h>
 using namespace std;
