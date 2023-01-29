@@ -1,10 +1,10 @@
-// Repeated Operation by Kazvin (v202301282335)
+// Repeated Operation by Kazvin (v202301292342)
 #include <iostream>
 #include <math.h>
 using namespace std;
 
 int main () {
-    long long FirstNumber, SecondNumber, NumberOfRepeats, SequenceNumber, IntQuotient;
+    long long FirstNumber, SecondNumber, NumberOfRepeats, SequenceNumber;
     string Operator, IncludeSequenceNumber;
     cout << "Enter your first number: ";
     cin >> FirstNumber;
