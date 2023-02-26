@@ -1,75 +1,76 @@
 /*
-Text to Morse Code by Kazvin (v202301282335)
+Text to Morse Code
 
 Reference:
 Morse Codes: https://morsedecoder.com
 */
+
 #include <iostream>
 using namespace std;
 
 int main () {
-    string Text;
-    cout << "Normal text: " << endl;
-    getline (cin, Text);
-    int Length = Text.size();
+    string text;
+    cout << "Normal Text: " << endl;
+    getline (cin, text);
+    int length = text.size();
     cout << endl << "Morse Code: " << endl;
-    for (int Counter = 0; Counter < Length; Counter++) {
-        char Character = Text[Counter];
-        if (Character == 'A' || Character == 'a') cout << ".- ";
-        else if (Character == 'B' || Character == 'b') cout << "-... ";
-        else if (Character == 'C' || Character == 'c') cout << "-.-. ";
-        else if (Character == 'D' || Character == 'd') cout << "-.. ";
-        else if (Character == 'E' || Character == 'e') cout << ". ";
-        else if (Character == 'F' || Character == 'f') cout << "..-. ";
-        else if (Character == 'G' || Character == 'g') cout << "--. ";
-        else if (Character == 'H' || Character == 'h') cout << ".... ";
-        else if (Character == 'I' || Character == 'i') cout << ".. ";
-        else if (Character == 'J' || Character == 'j') cout << ".--- ";
-        else if (Character == 'K' || Character == 'k') cout << "-.- ";
-        else if (Character == 'L' || Character == 'l') cout << ".-.. ";
-        else if (Character == 'M' || Character == 'm') cout << "-- ";
-        else if (Character == 'N' || Character == 'n') cout << "-. ";
-        else if (Character == 'O' || Character == 'o') cout << "--- ";
-        else if (Character == 'P' || Character == 'p') cout << ".--. ";
-        else if (Character == 'Q' || Character == 'q') cout << "--.- ";
-        else if (Character == 'R' || Character == 'r') cout << ".-. ";
-        else if (Character == 'S' || Character == 's') cout << "... ";
-        else if (Character == 'T' || Character == 't') cout << "- ";
-        else if (Character == 'U' || Character == 'u') cout << "..- ";
-        else if (Character == 'V' || Character == 'v') cout << "...- ";
-        else if (Character == 'W' || Character == 'w') cout << ".-- ";
-        else if (Character == 'X' || Character == 'x') cout << "-..- ";
-        else if (Character == 'Y' || Character == 'y') cout << "-.-- ";
-        else if (Character == 'Z' || Character == 'z') cout << "--.. ";
-        else if (Character == '0') cout << "----- ";
-        else if (Character == '1') cout << ".---- ";
-        else if (Character == '2') cout << "..--- ";
-        else if (Character == '3') cout << "...-- ";
-        else if (Character == '4') cout << "....- ";
-        else if (Character == '5') cout << "..... ";
-        else if (Character == '6') cout << "-.... ";
-        else if (Character == '7') cout << "--... ";
-        else if (Character == '8') cout << "---.. ";
-        else if (Character == '9') cout << "----. ";
-        else if (Character == '.') cout << ".-.-.- ";
-        else if (Character == ',') cout << "--..-- ";
-        else if (Character == '?') cout << "..--.. ";
-        else if (Character == 39) cout << ".----. ";
-        else if (Character == '!') cout << "-.-.-- ";
-        else if (Character == '/') cout << "-..-. ";
-        else if (Character == '(') cout << "-.--. ";
-        else if (Character == ')') cout << "-.--.- ";
-        else if (Character == '&') cout << ".-... ";
-        else if (Character == ':') cout << "---... ";
-        else if (Character == ';') cout << "-.-.-. ";
-        else if (Character == '=') cout << "-...- ";
-        else if (Character == '+') cout << ".-.-. ";
-        else if (Character == '-') cout << "-....- ";
-        else if (Character == '_') cout << "..--.- ";
-        else if (Character == '"') cout << ".-..-. ";
-        else if (Character == '$') cout << "...-..- ";
-        else if (Character == '@') cout << ".--.-. ";
-        else if (Character == ' ') cout << "/ ";
+    for (int counter = 0; counter < length; counter++) {
+        char character = text[counter];
+        if (character == 'A' || character == 'a') cout << ".- ";
+        else if (character == 'B' || character == 'b') cout << "-... ";
+        else if (character == 'C' || character == 'c') cout << "-.-. ";
+        else if (character == 'D' || character == 'd') cout << "-.. ";
+        else if (character == 'E' || character == 'e') cout << ". ";
+        else if (character == 'F' || character == 'f') cout << "..-. ";
+        else if (character == 'G' || character == 'g') cout << "--. ";
+        else if (character == 'H' || character == 'h') cout << ".... ";
+        else if (character == 'I' || character == 'i') cout << ".. ";
+        else if (character == 'J' || character == 'j') cout << ".--- ";
+        else if (character == 'K' || character == 'k') cout << "-.- ";
+        else if (character == 'L' || character == 'l') cout << ".-.. ";
+        else if (character == 'M' || character == 'm') cout << "-- ";
+        else if (character == 'N' || character == 'n') cout << "-. ";
+        else if (character == 'O' || character == 'o') cout << "--- ";
+        else if (character == 'P' || character == 'p') cout << ".--. ";
+        else if (character == 'Q' || character == 'q') cout << "--.- ";
+        else if (character == 'R' || character == 'r') cout << ".-. ";
+        else if (character == 'S' || character == 's') cout << "... ";
+        else if (character == 'T' || character == 't') cout << "- ";
+        else if (character == 'U' || character == 'u') cout << "..- ";
+        else if (character == 'V' || character == 'v') cout << "...- ";
+        else if (character == 'W' || character == 'w') cout << ".-- ";
+        else if (character == 'X' || character == 'x') cout << "-..- ";
+        else if (character == 'Y' || character == 'y') cout << "-.-- ";
+        else if (character == 'Z' || character == 'z') cout << "--.. ";
+        else if (character == '0') cout << "----- ";
+        else if (character == '1') cout << ".---- ";
+        else if (character == '2') cout << "..--- ";
+        else if (character == '3') cout << "...-- ";
+        else if (character == '4') cout << "....- ";
+        else if (character == '5') cout << "..... ";
+        else if (character == '6') cout << "-.... ";
+        else if (character == '7') cout << "--... ";
+        else if (character == '8') cout << "---.. ";
+        else if (character == '9') cout << "----. ";
+        else if (character == '.') cout << ".-.-.- ";
+        else if (character == ',') cout << "--..-- ";
+        else if (character == '?') cout << "..--.. ";
+        else if (character == 39) cout << ".----. ";
+        else if (character == '!') cout << "-.-.-- ";
+        else if (character == '/') cout << "-..-. ";
+        else if (character == '(') cout << "-.--. ";
+        else if (character == ')') cout << "-.--.- ";
+        else if (character == '&') cout << ".-... ";
+        else if (character == ':') cout << "---... ";
+        else if (character == ';') cout << "-.-.-. ";
+        else if (character == '=') cout << "-...- ";
+        else if (character == '+') cout << ".-.-. ";
+        else if (character == '-') cout << "-....- ";
+        else if (character == '_') cout << "..--.- ";
+        else if (character == '"') cout << ".-..-. ";
+        else if (character == '$') cout << "...-..- ";
+        else if (character == '@') cout << ".--.-. ";
+        else if (character == ' ') cout << "/ ";
         else cout << "# ";
     }
 }

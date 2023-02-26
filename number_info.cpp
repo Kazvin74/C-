@@ -1,33 +1,33 @@
-// Number Info by Kazvin (v202301282335)
+// Number Info
 #include <iostream>
 #include <cmath>
 using namespace std;
 
 int main () {
-    long double Number;
-    cout << "Number: ";
-    cin >> Number;
+    long double number;
+    cout << "number: ";
+    cin >> number;
     cout << "Classification: ";
-    if (Number - (round(Number/1)) != 0)
+    if (number - (round(number/1)) != 0)
         cout << "Rational";
-    else if (Number < 0)
+    else if (number < 0)
         cout << "Rational, Integer";
-    else if (Number == 0)
+    else if (number == 0)
         cout << "Rational, Integer, Whole";
-    else if (Number > 0)
+    else if (number > 0)
         cout << "Rational, Integer, Whole, Counting";
     cout << endl << "Sign: ";
-    if (Number < 0)
+    if (number < 0)
         cout << "Negative";
-    else if (Number == 0)
+    else if (number == 0)
         cout << "Zero";
-    else if (Number > 0)
+    else if (number > 0)
         cout << "Positive";
-    if (Number - (round(Number/1)) == 0) {
+    if (number - (round(number/1)) == 0) {
         cout << endl << "Parity: ";
-        if (Number - round(Number/2) == Number/2)
+        if (number - round(number/2) == number/2)
             cout << "Even";
-        else if (Number - round(Number/2) != Number/2)
+        else if (number - round(number/2) != number/2)
             cout << "Odd";
     }
 }

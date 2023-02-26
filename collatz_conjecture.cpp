@@ -1,28 +1,28 @@
-// Collatz Conjecture by Kazvin (v202301282335)
+// Collatz Conjecture
 #include <iostream>
 using namespace std;
 
 int main () {
-    unsigned long long Number, SequenceNumber = 1;
-    string IncludeSequenceNumber;
+    unsigned long long number, sequence_number = 1;
+    string include_sequence_number;
     cout << "Enter your number: ";
-    cin >> Number;
+    cin >> number;
     cout << "Include sequence number? (Y or N): ";
-    cin >> IncludeSequenceNumber;
-    if (IncludeSequenceNumber != "Y" && IncludeSequenceNumber != "N") {
+    cin >> include_sequence_number;
+    if (include_sequence_number != "Y" && include_sequence_number != "N") {
         cout << endl << "Invalid Input";
         return 0;
     }
     cout << endl << "Sequence: " << endl;
-    while (Number > 1) {
-        if (Number % 2 == 1)
-            Number = 3 * Number + 1;
-        else if (Number % 2 == 0)
-            Number = Number / 2;
-        if (IncludeSequenceNumber == "Y")
-            cout << SequenceNumber << ". ";
-        cout << Number << endl;
-        SequenceNumber++;
+    while (number > 1) {
+        if (number % 2 == 1)
+            number = 3 * number + 1;
+        else if (number % 2 == 0)
+            number = number / 2;
+        if (include_sequence_number == "Y")
+            cout << sequence_number << ". ";
+        cout << number << endl;
+        sequence_number++;
     }
     cout << endl << "You are now stuck in a 4, 2, 1 loop";
 }

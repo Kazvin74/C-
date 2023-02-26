@@ -1,37 +1,37 @@
-// Fibonacci Sequence by Kazvin (v202301282335)
+// Fibonacci Sequence
 #include <iostream>
 #include <iomanip>
 using namespace std;
 
 int main() {
-    long long FirstNumber, SecondNumber, ThirdNumber, NumbersInSequence, SequenceNumber;
-    string IncludeSequenceNumber;
+    long long first_number, second_number, third_number, numbers_in_sequence, sequence_number;
+    string include_sequence_number;
     cout << "Initial First Number: ";
-    cin >> FirstNumber;
+    cin >> first_number;
     cout << "Initial Second Number: ";
-    cin >> SecondNumber;
+    cin >> second_number;
     cout << "Numbers in the sequence: ";
-    cin >> NumbersInSequence;
+    cin >> numbers_in_sequence;
     cout << "Include sequence number? (Y or N): ";
-    cin >> IncludeSequenceNumber;
-    if (IncludeSequenceNumber != "Y" && IncludeSequenceNumber != "N") {
+    cin >> include_sequence_number;
+    if (include_sequence_number != "Y" && include_sequence_number != "N") {
         cout << endl << "Invalid Input";
         return 0;
     }
     cout << endl << "Sequence:" << endl;
-    for (SequenceNumber = 1; SequenceNumber <= NumbersInSequence; SequenceNumber++) {
-        if (IncludeSequenceNumber == "Y")
-            cout << SequenceNumber << ". ";
-        if (SequenceNumber == 1)
-            cout << FirstNumber << endl;
-        else if (SequenceNumber == 2)
-            cout << SecondNumber << endl;
+    for (sequence_number = 1; sequence_number <= numbers_in_sequence; sequence_number++) {
+        if (include_sequence_number == "Y")
+            cout << sequence_number << ". ";
+        if (sequence_number == 1)
+            cout << first_number << endl;
+        else if (sequence_number == 2)
+            cout << second_number << endl;
         else {
-            ThirdNumber = FirstNumber + SecondNumber;
-            cout << ThirdNumber << endl;
-            FirstNumber = SecondNumber;
-            SecondNumber = ThirdNumber;
-            ThirdNumber = 0;
+            third_number = first_number + second_number;
+            cout << third_number << endl;
+            first_number = second_number;
+            second_number = third_number;
+            third_number = 0;
         }
     }
 }
