@@ -39,11 +39,11 @@ int main() {
     else if (str_number[tens_index] == '5')
         RomanNumeral = "L" + RomanNumeral;
     else if (str_number[tens_index] == '6')
-        RomanNumeral = "XL" + RomanNumeral;
+        RomanNumeral = "LX" + RomanNumeral;
     else if (str_number[tens_index] == '7')
-        RomanNumeral = "XLL" + RomanNumeral;
+        RomanNumeral = "LXX" + RomanNumeral;
     else if (str_number[tens_index] == '8')
-        RomanNumeral = "XLLL" + RomanNumeral;
+        RomanNumeral = "LXXX" + RomanNumeral;
     else if (str_number[tens_index] == '9')
         RomanNumeral = "XC" + RomanNumeral;
     if (str_number[hundreds_index] == '1')
