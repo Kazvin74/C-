@@ -1,6 +1,9 @@
 - roman_to_arabic_numeral
-- wordle (My first program that needs more than 1 file,
+- wordle-styled_game (My first program that needs more than 1 file,
 because if I put all of the words in the array in the
 source code, the length of the line will be very long)
 - guess_the_number
 - random_string_generator
+- color_text_with_inputted_hex_code
+- dice_roller
+- rock_paper_scissors
