@@ -1,42 +1,59 @@
 /*
 Area Calculator
 
-References:
-area of Semicircle: https://www.easycalculation.com/area/area-semicircle-calculator.php
-area of Sector: https://thirdspacelearning.com/gcse-maths/geometry-and-measure/area-of-a-sector/
-The rest: (search "[shape] area" on Google and the calculator on the top of search results)
+Links:
+Area of Semicircle: https://www.easycalculation.com/area/area-semicircle-calculator.php
+Area of Sector: https://thirdspacelearning.com/gcse-maths/geometry-and-measure/area-of-a-sector/
+The rest: ("[shape] area" on Google and the calculator on the top of search results)
 */
 
 #include <iostream>
 #include <iomanip>
-#include <math.h>
+#include <cmath>
 #include <cmath>
 using namespace std;
 
-int main () {
-    double area, radius, radius_1, radius_2, angle, base, base_1, base_2, height, side, pi = 3.1415926535;
-    int decimal_places;
+int main() {
+
+    long double area, decimal_places, pi = 3.1415926535;
+    long double radius, radius_1, radius_2, angle, base;
+    long double base_1, base_2, height, side;
+    bool invalid_operator;
     string shape;
+
     cout << "Shapes:" << endl << "C = Circle" << endl << "SC = Semicircle" << endl;
     cout << "E = Ellipse" << endl << "SE = Sector" << endl << "T = Trapezoid" << endl;
     cout << "3 = Triangle" << endl << "4 = Rectangle" << endl << "5 = Pentagon" << endl;
     cout << "6 = Hexagon" << endl << "7 = Heptagon" << endl << "8 = Octagon" << endl;
     cout << "9 = Nonagon" << endl << "10 = Decagon" << endl << endl;
-    cout << "Shape (ex. SC): ";
+
+    cout << "Shape: ";
     cin >> shape;
+
+    while (!(shape == "C" || shape == "SC" || shape == "E" || shape == "SE" || shape == "T" ||
+        shape == "3" || shape == "4" || shape == "5" || shape == "6" || shape == "7" ||
+        shape == "8" || shape == "9" || shape == "10")) {
+        cout << "\033[31mInvalid input, please try again\033[0m" << endl << endl;
+        cout << "Shape: ";
+        cin >> shape;
+    }
+
     cout << "Decimal Places: ";
     cin >> decimal_places;
     cout << endl;
+
     if (shape == "C") {
         cout << "Radius: ";
         cin >> radius;
         area = pi * pow(radius, 2);
     }
+
     else if (shape == "SC") {
         cout << "Radius: ";
         cin >> radius;
         area = pi * pow(radius, 2) * 0.5;
     }
+
     else if (shape == "E") {
         cout << "Radius A: ";
         cin >> radius_1;
@@ -44,6 +61,7 @@ int main () {
         cin >> radius_2;
         area = pi * radius_1 * radius_2;
     }
+
     else if (shape == "SE") {
         cout << "Angle: ";
         cin >> angle;
@@ -51,6 +69,7 @@ int main () {
         cin >> radius;
         area = (angle/360.0) * pi * pow(radius, 2);
     }
+
     else if (shape == "T") {
         cout << "Base A: ";
         cin >> base_1;
@@ -60,6 +79,7 @@ int main () {
         cin >> height;
         area = (base_1 + base_2) * 0.5 * height;
     }
+
     else if (shape == "3") {
         cout << "Base: ";
         cin >> base;
@@ -67,6 +87,7 @@ int main () {
         cin >> height;
         area = (base * height) * 0.5;
     }
+
     else if (shape == "4") {
         cout << "Base: ";
         cin >> base;
@@ -74,6 +95,7 @@ int main () {
         cin >> height;
         area = (base * height);
     }
+
     else if (shape == "5" || shape == "6" || shape == "7" || shape == "8" || shape == "9" || shape == "10") {
         cout << "Side: ";
         cin >> side;
@@ -90,9 +112,9 @@ int main () {
         else if (shape == "10")
             area = 2.5 * pow(side, 2) * sqrt(5 + 2 * sqrt(5));
     }
-    else {
-        cout << "Invalid Input";
-        return 0;
-    }
+
     cout << "Area: " << fixed << setprecision(decimal_places) << area;
+
+    return 0;
+
 }

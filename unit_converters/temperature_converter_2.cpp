@@ -1,10 +1,19 @@
-// Temperature Converter #2 (converts to all units)
+/*
+Temperature Converter #2 (converts to all units)
+
+Link:
+Formulas: https://www.metric-conversions.org/temperature/[input_unit]-to-[output_unit].htm
+*/
+
 #include <iostream>
 using namespace std;
 
 int main() {
+
     string input_unit;
-    long double input_temperature, celsius, fahrenheit, kelvin, rankine, newton, reaumur, romer, delisle;
+    long double input_temperature, celsius, fahrenheit, kelvin;
+    long double rankine, newton, reaumur, romer, delisle;
+
     cout << "C = Celsius" << endl;
     cout << "F = Fahrenheit" << endl;
     cout << "K = Kelvin" << endl;
@@ -13,11 +22,21 @@ int main() {
     cout << "RE = Reaumur" << endl;
     cout << "RO = Romer" << endl;
     cout << "D = Delisle" << endl;
-    cout << "__________" << endl << endl;
+
+    cout << endl << "Input Unit: ";
+    cin >> input_unit;
+
+    while (!(input_unit == "C" || input_unit == "F" || input_unit == "K" ||
+            input_unit == "RA" || input_unit == "N" || input_unit == "RE" ||
+            input_unit == "RO" || input_unit == "D")) {
+        cout << "\033[31mInvalid input, please try again\033[0m" << endl << endl;
+        cout << "Input Unit: ";
+        cin >> input_unit;
+    }
+
     cout << "Input Temperature: ";
     cin >> input_temperature;
-    cout << "Input Unit: ";
-    cin >> input_unit;
+
     if (input_unit == "C")
         celsius = input_temperature;
     else if (input_unit == "F")
@@ -34,6 +53,7 @@ int main() {
         celsius = (input_temperature - 7.5) / 0.525;
     else if (input_unit == "D")
         celsius = (input_temperature + 100) / 1.5;
+
     fahrenheit = celsius * 1.8 + 32;
     kelvin = celsius + 273.15;
     rankine = celsius * 1.8 + 491.67;
@@ -41,6 +61,7 @@ int main() {
     reaumur = celsius * 0.8;
     romer = celsius * 0.525 + 7.5;
     delisle = celsius * 1.5 - 100;
+
     cout << endl << "Celsius: " << celsius << endl;
     cout << "Fahrenheit: " << fahrenheit << endl;
     cout << "Kelvin: " << kelvin << endl;
@@ -49,4 +70,7 @@ int main() {
     cout << "Reaumur: " << reaumur << endl;
     cout << "Romer: " << romer << endl;
     cout << "Delisle: " << delisle << endl;
+
+    return 0;
+
 }
