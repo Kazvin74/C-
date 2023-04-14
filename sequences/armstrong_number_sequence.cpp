@@ -38,7 +38,7 @@ int main() {
             str_num = to_string(num);
             length = str_num.length();
 
-            for (int counter = 0; counter < length; counter++) {
+            for (long long counter = 0; counter < length; counter++) {
                 digit = str_num[counter] - '0';
                 sum += pow(digit, length);
             }

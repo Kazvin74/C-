@@ -35,7 +35,7 @@ int main() {
             num++;
             sum_of_proper_divisors = 1;
 
-            for (int counter = 2; counter < num; counter++)
+            for (long long counter = 2; counter < num; counter++)
                 if (num % counter == 0)
                     sum_of_proper_divisors += counter;
 

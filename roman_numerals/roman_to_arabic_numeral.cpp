@@ -14,7 +14,7 @@ int main() {
     int length = roman_numeral.length(), arabic_numeral = 0,
     numbers[length], previous_value = 2000, current_value;
 
-    for (int counter = 0; counter < length; counter++) {
+    for (long long counter = 0; counter < length; counter++) {
         if (roman_numeral[counter] == 'M')
             numbers[counter] = 1000;
         else if (roman_numeral[counter] == 'D')
@@ -35,7 +35,7 @@ int main() {
         }
     }
 
-    for (int counter = 0; counter < length; counter++) {
+    for (long long counter = 0; counter < length; counter++) {
 
         current_value = numbers[counter];
 

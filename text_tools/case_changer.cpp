@@ -41,20 +41,20 @@ int main() {
     cout << endl;
 
     if (convert_to == "U") {
-        for (int counter = 0; counter < length; counter++)
+        for (long long counter = 0; counter < length; counter++)
             text[counter] = toupper(text[counter]);
         cout << "Uppercase";
     }
 
 
     else if (convert_to == "L") {
-        for (int counter = 0; counter < length; counter++)
+        for (long long counter = 0; counter < length; counter++)
             text[counter] = tolower(text[counter]);
         cout << "Lowercase";
     }
 
     else if (convert_to == "AL") {
-        for (int counter = 0; counter < length; counter++) {
+        for (long long counter = 0; counter < length; counter++) {
             if (alpha_char_counter % 2 == 0 && isalpha(text[counter])) {
                 text[counter] = tolower(text[counter]);
                 alpha_char_counter++;
@@ -68,7 +68,7 @@ int main() {
     }
 
     else if (convert_to == "AU") {
-        for (int counter = 0; counter < length; counter++) {
+        for (long long counter = 0; counter < length; counter++) {
             if (alpha_char_counter % 2 == 0 && isalpha(text[counter])) {
                 text[counter] = toupper(text[counter]);
                 alpha_char_counter++;
@@ -82,7 +82,7 @@ int main() {
     }
 
     else if (convert_to == "T") {
-        for (int counter = 0; counter < length; counter++) {
+        for (long long counter = 0; counter < length; counter++) {
             if (text[counter] == tolower(text[counter]))
                 text[counter] = toupper(text[counter]);
             else
@@ -92,7 +92,7 @@ int main() {
     }
 
     else if (convert_to == "R") {
-        for (int counter = 0; counter < length; counter++) {
+        for (long long counter = 0; counter < length; counter++) {
             is_uppercase = rand() % 2;
             if (is_uppercase)
                 text[counter] = toupper(text[counter]);
@@ -103,7 +103,7 @@ int main() {
     }
 
     else if (convert_to == "C") {
-        for (int counter = 0; counter < length; counter++) {
+        for (long long counter = 0; counter < length; counter++) {
             if (counter == 0 || !isalpha(text[counter - 1]))
                 text[counter] = toupper(text[counter]);
             else
@@ -113,7 +113,7 @@ int main() {
     }
 
     else if (convert_to == "S") {
-        for (int counter = 0; counter < length; counter++) {
+        for (long long counter = 0; counter < length; counter++) {
             if (counter == 0 || text[counter] == '.')
                 is_uppercase = true;
             if (is_uppercase && isalpha(text[counter])) {

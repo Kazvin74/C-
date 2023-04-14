@@ -5,12 +5,12 @@ using namespace std;
 
 int main() {
 
-    int num;
+    long long num;
 
     cout << "Number: ";
     cin >> num;
 
-    for (int factor = 2; factor <= num; factor++)
+    for (long long factor = 2; factor <= num; factor++)
         while (num % factor == 0) {
                 num /= factor;
                 cout << factor << " * ";

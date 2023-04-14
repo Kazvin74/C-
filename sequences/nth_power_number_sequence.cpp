@@ -39,7 +39,7 @@ int main() {
 
         result = sequence_num;
 
-        for (int counter = 1; counter < power; counter++) {
+        for (long long counter = 1; counter < power; counter++) {
             result *= sequence_num;
         }
 

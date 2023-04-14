@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
 
-    int num = 0, numbers_in_sequence, sequence_num, sum_of_proper_divisors;
+    long long num = 0, numbers_in_sequence, sequence_num, sum_of_proper_divisors;
     string include_sequence_num;
     bool abundant_num_found;
 
@@ -35,7 +35,7 @@ int main() {
             num++;
             sum_of_proper_divisors = 1;
 
-            for (int counter = 2; counter < num; counter++)
+            for (long long counter = 2; counter < num; counter++)
                 if (num % counter == 0)
                     sum_of_proper_divisors += counter;
 

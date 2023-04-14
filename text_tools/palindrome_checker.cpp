@@ -14,7 +14,7 @@ int main() {
     int length = text.length();
     bool is_palindrome = true;
 
-    for (int counter = 0; counter < length / 2; counter++)
+    for (long long counter = 0; counter < length / 2; counter++)
         if (text[counter] != text[length - counter - 1]) {
             is_palindrome = false;
             break;

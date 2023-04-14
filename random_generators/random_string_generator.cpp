@@ -41,11 +41,11 @@ int main() {
         cin >> config;
     }
 
-    for (int counter1 = 1; counter1 <= num_of_strings; counter1++) {
+    for (long long counter1 = 1; counter1 <= num_of_strings; counter1++) {
 
         cout << "String " << counter1 << ": ";
 
-        for (int counter2 = 0; counter2 < string_length; counter2++) {
+        for (long long counter2 = 0; counter2 < string_length; counter2++) {
 
             exit_loop = false;
 

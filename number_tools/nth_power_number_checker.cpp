@@ -23,10 +23,10 @@ int main() {
 
     root = pow(num, 1.0/power);
 
-    if (root == int(root))
-        cout << "The number is a ";
+    if (root == floor(root))
+        cout << endl << "The number is a ";
     else
-        cout << "The number is not a ";
+        cout << endl << "The number is not a ";
 
     if (power == 2)
         cout << "square number";

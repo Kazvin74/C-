@@ -19,7 +19,7 @@ int main() {
 
     cout << endl << "Morse Code: " << endl;
 
-    for (int counter = 0; counter < length; counter++) {
+    for (long long counter = 0; counter < length; counter++) {
 
         char character = text[counter];
 

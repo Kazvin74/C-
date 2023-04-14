@@ -5,14 +5,14 @@ using namespace std;
 
 int main() {
 
-    int num;
+    long long num;
 
     cout << "Number: ";
     cin >> num;
 
     cout << "Factors: ";
 
-    for (int counter = 1; counter <= num; counter++)
+    for (long long counter = 1; counter <= num; counter++)
         if (num % counter == 0)
             cout << counter << ", ";
 

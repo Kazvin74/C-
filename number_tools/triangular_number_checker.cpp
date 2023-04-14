@@ -5,13 +5,13 @@ using namespace std;
 
 int main() {
 
-    int num, temp, sum = 0;
+    long long num, temp, sum = 0;
     bool is_triangular = false;
 
     cout << "Number: ";
     cin >> num;
 
-    for (int counter = 1; counter < num; counter++) {
+    for (long long counter = 1; counter < num; counter++) {
         sum += counter;
         if (sum == num) {
             is_triangular = true;

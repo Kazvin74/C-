@@ -35,7 +35,7 @@ int main() {
             num++;
             largest_factor = 1;
 
-            for (int counter = 2; counter < num; counter++)
+            for (long long counter = 2; counter < num; counter++)
                 if (num % counter == 0)
                     largest_factor = counter;
 

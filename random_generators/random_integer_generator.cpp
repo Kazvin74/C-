@@ -32,20 +32,20 @@ int main() {
 
     if (min_range > max_range) {
         cout << endl << "\033[31mSwapped the values of the min_range and the max_range variable\033[0m" << endl;
-        int temp = min_range;
+        long long temp = min_range;
         min_range = max_range;
         max_range = temp;
     }
 
     possible_combinations = max_range - min_range + 1;
-    int occurrences[possible_combinations];
+    long long occurrences[possible_combinations];
 
     cout << endl << "Numbers:" << endl;
 
-    for (int counter = 0; counter < possible_combinations; counter++)
+    for (long long counter = 0; counter < possible_combinations; counter++)
         occurrences[counter] = 0;
 
-    for (int counter = 1; counter <= num_of_ints; counter++) {
+    for (long long counter = 1; counter <= num_of_ints; counter++) {
         num = rand() % possible_combinations + min_range;
         cout << counter << ": " << num << endl;
         occurrences[num - min_range]++;
@@ -53,13 +53,13 @@ int main() {
 
     if (include_occurrences == 1) {
         cout << endl << "Occurrences:" << endl;
-        for (int counter = 0; counter < possible_combinations; counter++)
+        for (long long counter = 0; counter < possible_combinations; counter++)
             if (occurrences[counter] != 0)
                 cout << counter + min_range << ": " << occurrences[counter] << endl;
     }
     else if (include_occurrences == 2) {
         cout << endl << "Occurrences:" << endl;
-        for (int counter = 0; counter < possible_combinations; counter++)
+        for (long long counter = 0; counter < possible_combinations; counter++)
             cout << counter + min_range << ": " << occurrences[counter] << endl;
     }
 

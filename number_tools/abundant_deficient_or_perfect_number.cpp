@@ -5,12 +5,12 @@ using namespace std;
 
 int main() {
 
-    int num, sum_of_proper_divisors = 1;
+    long long num, sum_of_proper_divisors = 1;
 
     cout << "Number: ";
     cin >> num;
 
-    for (int counter = 2; counter < num; counter++)
+    for (long long counter = 2; counter < num; counter++)
         if (num % counter == 0)
             sum_of_proper_divisors += counter;
 

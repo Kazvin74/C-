@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 
-    int first_num, second_num, larger_num, GCF = 1, LCM = 1;
+    long long first_num, second_num, larger_num, GCF = 1, LCM = 1;
 
     cout << "First Number: ";
     cin >> first_num;
@@ -17,11 +17,11 @@ int main() {
     else
         larger_num = second_num;
 
-    for (int counter = 1; counter <= larger_num; counter++)
+    for (long long counter = 1; counter <= larger_num; counter++)
         if (first_num % counter == 0 && second_num % counter == 0)
             GCF = counter;
 
-    int counter = larger_num;
+    long long counter = larger_num;
     while (counter % first_num != 0 || counter % second_num != 0)
         counter++;
 
