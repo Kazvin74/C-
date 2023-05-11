@@ -1,7 +1,6 @@
 // Abundant Number Sequence
 
 #include <iostream>
-#include <cctype>
 using namespace std;
 
 int main() {
@@ -31,7 +30,6 @@ int main() {
             cout << sequence_num << ". ";
 
         while (!abundant_num_found) {
-
             num++;
             sum_of_proper_divisors = 1;
 

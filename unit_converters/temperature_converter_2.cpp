@@ -46,7 +46,7 @@ int main() {
     else if (input_unit == "RA")
         celsius = (input_temperature - 491.67) / 1.8;
     else if (input_unit == "N")
-        celsius = input_temperature / 0.33;
+        celsius = input_temperature * 0.33;
     else if (input_unit == "RE")
         celsius = input_temperature / 0.8;
     else if (input_unit == "RO")

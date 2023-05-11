@@ -36,7 +36,7 @@ int main() {
         config[2] != '0' && config[2] != '1' ||
         config[3] != '0' && config[3] != '1' ||
         config == "0000" || config.length() != 4) {
-        cout << "\033[31mInvalid input, please try again\033[0m" << endl << endl;
+        cout << "\033[31mInvalid config, please try again\033[0m" << endl << endl;
         cout << "Configuration: ";
         cin >> config;
     }

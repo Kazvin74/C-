@@ -1,7 +1,6 @@
 // Fibonacci Sequence
 
 #include <iostream>
-#include <cctype>
 #include <iomanip>
 using namespace std;
 

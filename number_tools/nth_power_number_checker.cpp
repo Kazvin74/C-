@@ -16,7 +16,7 @@ int main() {
     cin >> power;
 
     while (power < 2) {
-        cout << "\033[31mInvalid input, please try again\033[0m" << endl << endl;
+        cout << "\033[31mInvalid input, power should be greater than or equal to 2\033[0m" << endl << endl;
         cout << "Power: ";
         cin >> power;
     }

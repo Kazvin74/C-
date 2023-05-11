@@ -1,4 +1,5 @@
 // Case Changer
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -24,15 +25,16 @@ int main() {
 
     cout << "Change case to: ";
     cin >> convert_to;
+    cin.ignore();
 
     while (!(convert_to == "U" || convert_to == "L" || convert_to == "AL" || convert_to == "AU" ||
             convert_to == "T" || convert_to == "R" || convert_to == "C" || convert_to == "S")) {
         cout << "\033[31mInvalid input, please try again\033[0m" << endl << endl;
         cout << "Change case to: ";
         cin >> convert_to;
+        cin.ignore();
     }
 
-    cin.ignore();
     cout << endl << "Text: " << endl;
     getline(cin, text);
 
@@ -109,7 +111,7 @@ int main() {
             else
                 text[counter] = tolower(text[counter]);
         }
-        cout << "Capitalized each word ";
+        cout << "Capitalized each word";
     }
 
     else if (convert_to == "S") {
